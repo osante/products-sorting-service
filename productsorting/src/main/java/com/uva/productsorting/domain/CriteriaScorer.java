@@ -5,5 +5,5 @@ import com.uva.productsorting.domain.model.SortingCriteria;
 
 @FunctionalInterface
 public interface CriteriaScorer {
-    double scoreProductBySortingCriteria(Product product, SortingCriteria sortingCriteria);
+  double scoreProductBySortingCriteria(Product product, SortingCriteria sortingCriteria);
 }
