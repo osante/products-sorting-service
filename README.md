@@ -46,8 +46,6 @@ cd productsorting
 ./gradlew bootRun
 ```
 
-http://localhost:8080/swagger-ui/index.html
-
 ### 🧭 Swagger API Docs
 Available at:
 ➡️ http://localhost:8080/swagger-ui.html
