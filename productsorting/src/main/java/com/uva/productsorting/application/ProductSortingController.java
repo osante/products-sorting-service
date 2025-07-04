@@ -1,8 +1,6 @@
 package com.uva.productsorting.application;
 
 import com.uva.productsorting.domain.ProductSortingService;
-import com.uva.productsorting.domain.model.Product;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +17,11 @@ public class ProductSortingController {
   }
 
   @PostMapping("/products/sorting")
-  List<Product> sortProducts(@RequestBody SortProductsRequest sortProductsRequest) {
-    return productSortingService.sortProducts(
-        sortProductsRequest.getProducts(), sortProductsRequest.getSortingCriteriaList());
+  SortProductsResponse sortProducts(@RequestBody SortProductsRequest sortProductsRequest) {
+    return SortProductsResponse.builder()
+        .products(
+            productSortingService.sortProducts(
+                sortProductsRequest.getProducts(), sortProductsRequest.getSortingCriteriaList()))
+        .build();
   }
 }

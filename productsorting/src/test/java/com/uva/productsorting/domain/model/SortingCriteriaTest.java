@@ -1,11 +1,11 @@
 package com.uva.productsorting.domain.model;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import com.uva.productsorting.domain.CriteriaScorer;
 import com.uva.productsorting.domain.SaleUnitsCriteriaScorer;
 import com.uva.productsorting.domain.StockCriteriaScorer;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class SortingCriteriaTest {
 
