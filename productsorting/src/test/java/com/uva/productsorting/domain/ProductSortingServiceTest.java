@@ -31,8 +31,8 @@ public class ProductSortingServiceTest {
                 .build());
     List<SortingCriteria> sortingCriteriaList =
         List.of(
-            SortingCriteria.builder().field(SortingCriteria.Field.SALE_UNITS).weight(1.5F).build(),
-            SortingCriteria.builder().field(SortingCriteria.Field.STOCK).weight(0.5F).build());
+            SortingCriteria.builder().type(SortingCriteria.Type.SALE_UNITS).weight(1.5F).build(),
+            SortingCriteria.builder().type(SortingCriteria.Type.STOCK).weight(0.5F).build());
 
     List<Product> sortedProducts =
         productSortingService.sortProducts(products, sortingCriteriaList);

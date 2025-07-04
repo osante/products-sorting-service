@@ -11,14 +11,14 @@ public class SortingCriteriaTest {
 
   @Test
   void testSaleUnitsField_isLinkedToSaleUnitsCriteriaScorer() {
-    CriteriaScorer criteriaScorer = SortingCriteria.Field.SALE_UNITS.getCriteriaScorer();
+    CriteriaScorer criteriaScorer = SortingCriteria.Type.SALE_UNITS.getCriteriaScorer();
 
     assertThat(criteriaScorer).isInstanceOf(SaleUnitsCriteriaScorer.class);
   }
 
   @Test
   void testStockField_isLinkedToStockCriteriaScorer() {
-    CriteriaScorer criteriaScorer = SortingCriteria.Field.STOCK.getCriteriaScorer();
+    CriteriaScorer criteriaScorer = SortingCriteria.Type.STOCK.getCriteriaScorer();
 
     assertThat(criteriaScorer).isInstanceOf(StockCriteriaScorer.class);
   }

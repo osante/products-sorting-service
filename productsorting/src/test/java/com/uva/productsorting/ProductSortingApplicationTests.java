@@ -68,13 +68,10 @@ class ProductSortingApplicationTests {
             .sortingCriteriaList(
                 List.of(
                     SortingCriteria.builder()
-                        .field(SortingCriteria.Field.SALE_UNITS)
+                        .type(SortingCriteria.Type.SALE_UNITS)
                         .weight(1f)
                         .build(),
-                    SortingCriteria.builder()
-                        .field(SortingCriteria.Field.STOCK)
-                        .weight(1f)
-                        .build()))
+                    SortingCriteria.builder().type(SortingCriteria.Type.STOCK).weight(1f).build()))
             .build();
 
     SortProductsResponse sortProductsResponse =
@@ -159,7 +156,7 @@ class ProductSortingApplicationTests {
             .sortingCriteriaList(
                 List.of(
                     SortingCriteria.builder()
-                        .field(SortingCriteria.Field.SALE_UNITS)
+                        .type(SortingCriteria.Type.SALE_UNITS)
                         .weight(1f)
                         .build()))
             .build();
@@ -210,10 +207,7 @@ class ProductSortingApplicationTests {
                         .build()))
             .sortingCriteriaList(
                 List.of(
-                    SortingCriteria.builder()
-                        .field(SortingCriteria.Field.STOCK)
-                        .weight(1f)
-                        .build()))
+                    SortingCriteria.builder().type(SortingCriteria.Type.STOCK).weight(1f).build()))
             .build();
 
     SortProductsResponse sortProductsResponse =

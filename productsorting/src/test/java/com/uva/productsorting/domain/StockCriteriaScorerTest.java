@@ -18,7 +18,7 @@ public class StockCriteriaScorerTest {
             .stock(Product.Stock.builder().large(10).medium(15).small(5).build())
             .build();
     SortingCriteria sortingCriteria =
-        SortingCriteria.builder().field(SortingCriteria.Field.STOCK).weight(0.5F).build();
+        SortingCriteria.builder().type(SortingCriteria.Type.STOCK).weight(0.5F).build();
 
     double score = stockCriteriaScorer.scoreProductBySortingCriteria(product, sortingCriteria);
 

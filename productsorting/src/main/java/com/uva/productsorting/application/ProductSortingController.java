@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+/** Rest controller for the products sorting. */
 @RestController
 public class ProductSortingController {
 
@@ -16,6 +17,12 @@ public class ProductSortingController {
     this.productSortingService = productSortingService;
   }
 
+  /**
+   * Sort products using the provided request.
+   *
+   * @param sortProductsRequest with the products and criteria to use for the sorting.
+   * @return a response that contains the sorted list of products.
+   */
   @PostMapping("/products/sorting")
   SortProductsResponse sortProducts(@RequestBody SortProductsRequest sortProductsRequest) {
     return SortProductsResponse.builder()
